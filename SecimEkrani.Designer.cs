@@ -113,6 +113,7 @@
             this.BtnMstok.TabIndex = 6;
             this.BtnMstok.Text = "Malzeme Stok Bilgileri";
             this.BtnMstok.UseVisualStyleBackColor = true;
+            this.BtnMstok.Click += new System.EventHandler(this.BtnMstok_Click);
             // 
             // BtnMusteriMesajlari
             // 

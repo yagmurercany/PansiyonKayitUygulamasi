@@ -66,5 +66,12 @@ namespace PansiyonKayitUygulamasi
             GelirGider gelirGider = new GelirGider();
             gelirGider.Show();
         }
+
+        private void BtnMstok_Click(object sender, EventArgs e)
+        {
+            Stoklar stoklar = new Stoklar();   
+            stoklar.Show();
+            this.Hide();
+        }
     }
 }

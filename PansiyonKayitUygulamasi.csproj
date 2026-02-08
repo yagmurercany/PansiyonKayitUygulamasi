@@ -89,6 +89,12 @@
     <Compile Include="SecimEkrani.Designer.cs">
       <DependentUpon>SecimEkrani.cs</DependentUpon>
     </Compile>
+    <Compile Include="Stoklar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Stoklar.Designer.cs">
+      <DependentUpon>Stoklar.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -115,6 +121,9 @@
     </Compile>
     <EmbeddedResource Include="SecimEkrani.resx">
       <DependentUpon>SecimEkrani.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Stoklar.resx">
+      <DependentUpon>Stoklar.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="PansiyonKayitDataSet.xsc">
       <DependentUpon>PansiyonKayitDataSet.xsd</DependentUpon>
