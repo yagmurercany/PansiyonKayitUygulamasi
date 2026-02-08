@@ -33,13 +33,19 @@ namespace PansiyonKayitUygulamasi
                     ekle.SubItems.Add(dr["Çerezler"].ToString());
                     listView1.Items.Add(ekle);
                 }
-                con.Close();
+                
             }
+            con.Close();
         }
         private void BtnKaydet_Click(object sender, EventArgs e)
         {
-            veriler();
                     
             }
+
+        private void Stoklar_Load(object sender, EventArgs e)
+        {
+            veriler();
+
         }
+    }
     }

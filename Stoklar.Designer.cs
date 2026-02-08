@@ -91,9 +91,9 @@
             // 
             // BtnKaydet
             // 
-            this.BtnKaydet.Location = new System.Drawing.Point(18, 117);
+            this.BtnKaydet.Location = new System.Drawing.Point(13, 117);
             this.BtnKaydet.Name = "BtnKaydet";
-            this.BtnKaydet.Size = new System.Drawing.Size(298, 23);
+            this.BtnKaydet.Size = new System.Drawing.Size(319, 23);
             this.BtnKaydet.TabIndex = 6;
             this.BtnKaydet.Text = "Kaydet";
             this.BtnKaydet.UseVisualStyleBackColor = true;
@@ -116,14 +116,17 @@
             // columnHeader1
             // 
             this.columnHeader1.Text = "Gıdalar";
+            this.columnHeader1.Width = 109;
             // 
             // columnHeader2
             // 
             this.columnHeader2.Text = "İçecekler";
+            this.columnHeader2.Width = 88;
             // 
             // columnHeader3
             // 
             this.columnHeader3.Text = "Atıştırmalıklar";
+            this.columnHeader3.Width = 114;
             // 
             // Stoklar
             // 
@@ -140,6 +143,7 @@
             this.Controls.Add(this.label1);
             this.Name = "Stoklar";
             this.Text = "Stoklar";
+            this.Load += new System.EventHandler(this.Stoklar_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

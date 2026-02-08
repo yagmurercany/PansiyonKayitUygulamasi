@@ -39,6 +39,9 @@
             this.label9 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.BtnHesapla = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -139,11 +142,42 @@
             this.BtnHesapla.UseVisualStyleBackColor = true;
             this.BtnHesapla.Click += new System.EventHandler(this.BtnHesapla_Click);
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(185, 185);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(21, 16);
+            this.label2.TabIndex = 12;
+            this.label2.Text = "00";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(110, 185);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(54, 16);
+            this.label6.TabIndex = 11;
+            this.label6.Text = "Sonuç : ";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(3, 156);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(797, 16);
+            this.label7.TabIndex = 13;
+            this.label7.Text = "*********************************************************************************" +
+    "*****************************************************************************";
+            // 
             // GelirGider
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(800, 230);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label6);
             this.Controls.Add(this.BtnHesapla);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label9);
@@ -175,5 +209,8 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Button BtnHesapla;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label7;
     }
 }
