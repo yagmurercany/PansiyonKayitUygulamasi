@@ -26,6 +26,14 @@ namespace PansiyonKayitUygulamasi
             int personel;
             personel = Convert.ToInt32(textBox1.Text);
             LblPersonelMaas.Text = (personel * 1500).ToString();
+
+            int sonuc, kasa, gider;
+            
+            kasa = Convert.ToInt32(LblKasaToplam.Text);
+            gider = Convert.ToInt16(LblPersonelMaas.Text) + Convert.ToInt16(LblAlinanUrun.Text) + Convert.ToInt16(LblAlinanUrunler1.Text) + Convert.ToInt16(LblAlinanUrunler2.Text) + Convert.ToInt16(LblFatura.Text) + Convert.ToInt16(lblFatura1.Text) + Convert.ToInt16(lblFatura2.Text);
+            sonuc = kasa - gider;
+
+            label2.Text = sonuc.ToString();
         }
 
         private void GelirGider_Load(object sender, EventArgs e)
@@ -72,25 +80,44 @@ namespace PansiyonKayitUygulamasi
                 LblAlinanUrunler2.Text = oku4["toplam3"].ToString();
             }
             con.Close();
-            
-        }
-        private void veriler2()
-        {
-                       ListView2.Items.Clear();
+
+            //elektrik giderleri
+
             con.Open();
-            SqlCommand cmd = new SqlCommand("select * from  AlinanUrunler", con);
-            SqlDataReader dr = cmd.ExecuteReader();
-            while (dr.Read())
+
+            SqlCommand cmd5 = new SqlCommand("select sum(Elektrik) as toplam4 from Faturalar", con);
+            SqlDataReader oku5 = cmd5.ExecuteReader();
+            while (oku5.Read())
             {
-                ListViewItem ekle = new ListViewItem();
-                {
-                    ekle.Text = dr["Gıda"].ToString();
-                    ekle.SubItems.Add(dr["İçecek"].ToString());
-                    ekle.SubItems.Add(dr["Çerezler"].ToString());
-                    listView1.Items.Add(ekle);
-                }
+                LblFatura.Text = oku5["toplam4"].ToString();
             }
             con.Close();
+
+            //su giderleri
+
+            con.Open();
+
+            SqlCommand cmd6 = new SqlCommand("select sum(Su) as toplam5 from Faturalar", con);
+            SqlDataReader oku6 = cmd6.ExecuteReader();
+            while (oku6.Read())
+            {
+                lblFatura1.Text = oku6["toplam5"].ToString();
+            }
+            con.Close();
+
+            //internet giderleri
+
+            con.Open();
+
+            SqlCommand cmd7 = new SqlCommand("select sum(İnternet) as toplam6 from Faturalar", con);
+            SqlDataReader oku7 = cmd7.ExecuteReader();
+            while (oku7.Read())
+            {
+                lblFatura2.Text = oku7["toplam6"].ToString();
+            }
+            con.Close();
+
         }
+
     }
-}
+    }

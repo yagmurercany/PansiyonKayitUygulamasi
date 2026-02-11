@@ -75,7 +75,7 @@ namespace PansiyonKayitUygulamasi
             //ODA 104
             con.Open();
             SqlCommand cmd4 = new SqlCommand("select * from Oda104", con);
-            SqlDataReader oku4 = cmd3.ExecuteReader();
+            SqlDataReader oku4 = cmd4.ExecuteReader();
             while (oku4.Read())
             {
                 Btn104.Text = oku4["Adi"].ToString() + " " + oku4["Soyadi"].ToString();
@@ -112,7 +112,7 @@ namespace PansiyonKayitUygulamasi
             SqlDataReader oku6 = cmd6.ExecuteReader();
             while (oku6.Read())
             {
-                Btn106.Text = oku3["Adi"].ToString() + " " + oku6["Soyadi"].ToString();
+                Btn106.Text = oku6["Adi"].ToString() + " " + oku6["Soyadi"].ToString();
             }
             con.Close();
             if (Btn106.Text != "106")

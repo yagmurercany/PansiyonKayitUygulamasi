@@ -44,6 +44,8 @@
             this.label7 = new System.Windows.Forms.Label();
             this.LblAlinanUrunler1 = new System.Windows.Forms.Label();
             this.LblAlinanUrunler2 = new System.Windows.Forms.Label();
+            this.lblFatura1 = new System.Windows.Forms.Label();
+            this.lblFatura2 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -190,11 +192,31 @@
             this.LblAlinanUrunler2.TabIndex = 15;
             this.LblAlinanUrunler2.Text = "00";
             // 
+            // lblFatura1
+            // 
+            this.lblFatura1.AutoSize = true;
+            this.lblFatura1.Location = new System.Drawing.Point(261, 127);
+            this.lblFatura1.Name = "lblFatura1";
+            this.lblFatura1.Size = new System.Drawing.Size(21, 16);
+            this.lblFatura1.TabIndex = 16;
+            this.lblFatura1.Text = "00";
+            // 
+            // lblFatura2
+            // 
+            this.lblFatura2.AutoSize = true;
+            this.lblFatura2.Location = new System.Drawing.Point(346, 127);
+            this.lblFatura2.Name = "lblFatura2";
+            this.lblFatura2.Size = new System.Drawing.Size(21, 16);
+            this.lblFatura2.TabIndex = 17;
+            this.lblFatura2.Text = "00";
+            // 
             // GelirGider
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 230);
+            this.Controls.Add(this.lblFatura2);
+            this.Controls.Add(this.lblFatura1);
             this.Controls.Add(this.LblAlinanUrunler2);
             this.Controls.Add(this.LblAlinanUrunler1);
             this.Controls.Add(this.label7);
@@ -237,5 +259,7 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label LblAlinanUrunler1;
         private System.Windows.Forms.Label LblAlinanUrunler2;
+        private System.Windows.Forms.Label lblFatura1;
+        private System.Windows.Forms.Label lblFatura2;
     }
 }

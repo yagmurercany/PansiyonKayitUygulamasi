@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
+using System.Drawing.Printing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -34,14 +35,14 @@ namespace PansiyonKayitUygulamasi
                     ekle.SubItems.Add(dr["Çerezler"].ToString());
                     listView1.Items.Add(ekle);
                 }
-                
+
             }
             con.Close();
         }
         private void BtnKaydet_Click(object sender, EventArgs e)
         {
             con.Open();
-            SqlCommand cmd = new SqlCommand("insert into AlinanUrunler (Gıda,İçecek,Çerezler) values ( '"+ TxtGida.Text + "' ,'" + Txtİcecek.Text + "','" + TxtAtistirmalik.Text+ "')", con);
+            SqlCommand cmd = new SqlCommand("insert into AlinanUrunler (Gıda,İçecek,Çerezler) values ( '" + TxtGida.Text + "' ,'" + Txtİcecek.Text + "','" + TxtAtistirmalik.Text + "')", con);
             cmd.ExecuteNonQuery();
             con.Close();
             veriler();
@@ -51,7 +52,35 @@ namespace PansiyonKayitUygulamasi
         private void Stoklar_Load(object sender, EventArgs e)
         {
             veriler();
+            veriler2();
 
         }
+        private void veriler2()
+        {
+            listView2.Items.Clear();
+            con.Open();
+            SqlCommand cmd1 = new SqlCommand("select * from  Faturalar", con);
+            SqlDataReader dr1 = cmd1.ExecuteReader();
+            while (dr1.Read())
+            {
+                ListViewItem ekle = new ListViewItem();
+                {
+                    ekle.Text = dr1["Elektrik"].ToString();
+                    ekle.SubItems.Add(dr1["Su"].ToString());
+                    ekle.SubItems.Add(dr1["İnternet"].ToString());
+                    listView2.Items.Add(ekle);
+                }
+            }
+            con.Close();
+        }
+
+        private void BtnKaydet2_Click(object sender, EventArgs e)
+        {
+            con.Open();
+            SqlCommand cmd1 = new SqlCommand("insert into Faturalar (Elektrik,Su,İnternet) values ( '" + TxtElektrik.Text + "' ,'" + TxtSu.Text + "','" + Txtİnternet.Text + "')", con);
+            cmd1.ExecuteNonQuery();
+            con.Close();
+            veriler2();
+        }
     }
-    }
+}

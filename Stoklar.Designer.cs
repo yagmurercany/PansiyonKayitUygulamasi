@@ -104,7 +104,7 @@
             // 
             this.BtnKaydet.Location = new System.Drawing.Point(13, 117);
             this.BtnKaydet.Name = "BtnKaydet";
-            this.BtnKaydet.Size = new System.Drawing.Size(319, 23);
+            this.BtnKaydet.Size = new System.Drawing.Size(346, 39);
             this.BtnKaydet.TabIndex = 6;
             this.BtnKaydet.Text = "Kaydet";
             this.BtnKaydet.UseVisualStyleBackColor = true;
@@ -119,7 +119,7 @@
             this.listView1.HideSelection = false;
             this.listView1.Location = new System.Drawing.Point(13, 163);
             this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(319, 135);
+            this.listView1.Size = new System.Drawing.Size(346, 135);
             this.listView1.TabIndex = 7;
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.Details;
@@ -191,10 +191,11 @@
             // 
             this.BtnKaydet2.Location = new System.Drawing.Point(386, 117);
             this.BtnKaydet2.Name = "BtnKaydet2";
-            this.BtnKaydet2.Size = new System.Drawing.Size(319, 23);
+            this.BtnKaydet2.Size = new System.Drawing.Size(349, 39);
             this.BtnKaydet2.TabIndex = 14;
             this.BtnKaydet2.Text = "Kaydet";
             this.BtnKaydet2.UseVisualStyleBackColor = true;
+            this.BtnKaydet2.Click += new System.EventHandler(this.BtnKaydet2_Click);
             // 
             // listView2
             // 
@@ -205,24 +206,24 @@
             this.listView2.HideSelection = false;
             this.listView2.Location = new System.Drawing.Point(386, 162);
             this.listView2.Name = "listView2";
-            this.listView2.Size = new System.Drawing.Size(319, 135);
+            this.listView2.Size = new System.Drawing.Size(349, 135);
             this.listView2.TabIndex = 15;
             this.listView2.UseCompatibleStateImageBehavior = false;
             this.listView2.View = System.Windows.Forms.View.Details;
             // 
             // columnHeader4
             // 
-            this.columnHeader4.Text = "Gıdalar";
+            this.columnHeader4.Text = "Elektrik";
             this.columnHeader4.Width = 109;
             // 
             // columnHeader5
             // 
-            this.columnHeader5.Text = "İçecekler";
+            this.columnHeader5.Text = "Su";
             this.columnHeader5.Width = 88;
             // 
             // columnHeader6
             // 
-            this.columnHeader6.Text = "Atıştırmalıklar";
+            this.columnHeader6.Text = "İnternet";
             this.columnHeader6.Width = 114;
             // 
             // Stoklar

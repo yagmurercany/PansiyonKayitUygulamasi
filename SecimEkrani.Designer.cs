@@ -132,6 +132,7 @@
             this.BtnRadyo.TabIndex = 8;
             this.BtnRadyo.Text = "Radyo Dinle";
             this.BtnRadyo.UseVisualStyleBackColor = true;
+            this.BtnRadyo.Click += new System.EventHandler(this.BtnRadyo_Click);
             // 
             // button10
             // 
