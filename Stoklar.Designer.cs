@@ -39,6 +39,17 @@
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.Txtİnternet = new System.Windows.Forms.TextBox();
+            this.TxtSu = new System.Windows.Forms.TextBox();
+            this.TxtElektrik = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.BtnKaydet2 = new System.Windows.Forms.Button();
+            this.listView2 = new System.Windows.Forms.ListView();
+            this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.SuspendLayout();
             // 
             // label1
@@ -128,11 +139,105 @@
             this.columnHeader3.Text = "Atıştırmalıklar";
             this.columnHeader3.Width = 114;
             // 
+            // Txtİnternet
+            // 
+            this.Txtİnternet.Location = new System.Drawing.Point(485, 74);
+            this.Txtİnternet.Name = "Txtİnternet";
+            this.Txtİnternet.Size = new System.Drawing.Size(220, 22);
+            this.Txtİnternet.TabIndex = 13;
+            // 
+            // TxtSu
+            // 
+            this.TxtSu.Location = new System.Drawing.Point(485, 43);
+            this.TxtSu.Name = "TxtSu";
+            this.TxtSu.Size = new System.Drawing.Size(220, 22);
+            this.TxtSu.TabIndex = 12;
+            // 
+            // TxtElektrik
+            // 
+            this.TxtElektrik.Location = new System.Drawing.Point(486, 13);
+            this.TxtElektrik.Name = "TxtElektrik";
+            this.TxtElektrik.Size = new System.Drawing.Size(220, 22);
+            this.TxtElektrik.TabIndex = 11;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(372, 80);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(107, 16);
+            this.label4.TabIndex = 10;
+            this.label4.Text = "İnternet Faturası :";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(399, 46);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(80, 16);
+            this.label5.TabIndex = 9;
+            this.label5.Text = "Su Faturası :";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(371, 13);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(108, 16);
+            this.label6.TabIndex = 8;
+            this.label6.Text = "Elektrik Faturası :";
+            // 
+            // BtnKaydet2
+            // 
+            this.BtnKaydet2.Location = new System.Drawing.Point(386, 117);
+            this.BtnKaydet2.Name = "BtnKaydet2";
+            this.BtnKaydet2.Size = new System.Drawing.Size(319, 23);
+            this.BtnKaydet2.TabIndex = 14;
+            this.BtnKaydet2.Text = "Kaydet";
+            this.BtnKaydet2.UseVisualStyleBackColor = true;
+            // 
+            // listView2
+            // 
+            this.listView2.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader4,
+            this.columnHeader5,
+            this.columnHeader6});
+            this.listView2.HideSelection = false;
+            this.listView2.Location = new System.Drawing.Point(386, 162);
+            this.listView2.Name = "listView2";
+            this.listView2.Size = new System.Drawing.Size(319, 135);
+            this.listView2.TabIndex = 15;
+            this.listView2.UseCompatibleStateImageBehavior = false;
+            this.listView2.View = System.Windows.Forms.View.Details;
+            // 
+            // columnHeader4
+            // 
+            this.columnHeader4.Text = "Gıdalar";
+            this.columnHeader4.Width = 109;
+            // 
+            // columnHeader5
+            // 
+            this.columnHeader5.Text = "İçecekler";
+            this.columnHeader5.Width = 88;
+            // 
+            // columnHeader6
+            // 
+            this.columnHeader6.Text = "Atıştırmalıklar";
+            this.columnHeader6.Width = 114;
+            // 
             // Stoklar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(350, 309);
+            this.ClientSize = new System.Drawing.Size(939, 309);
+            this.Controls.Add(this.listView2);
+            this.Controls.Add(this.BtnKaydet2);
+            this.Controls.Add(this.Txtİnternet);
+            this.Controls.Add(this.TxtSu);
+            this.Controls.Add(this.TxtElektrik);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.label6);
             this.Controls.Add(this.listView1);
             this.Controls.Add(this.BtnKaydet);
             this.Controls.Add(this.TxtAtistirmalik);
@@ -162,5 +267,16 @@
         private System.Windows.Forms.ColumnHeader columnHeader1;
         private System.Windows.Forms.ColumnHeader columnHeader2;
         private System.Windows.Forms.ColumnHeader columnHeader3;
+        private System.Windows.Forms.TextBox Txtİnternet;
+        private System.Windows.Forms.TextBox TxtSu;
+        private System.Windows.Forms.TextBox TxtElektrik;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Button BtnKaydet2;
+        private System.Windows.Forms.ListView listView2;
+        private System.Windows.Forms.ColumnHeader columnHeader4;
+        private System.Windows.Forms.ColumnHeader columnHeader5;
+        private System.Windows.Forms.ColumnHeader columnHeader6;
     }
 }

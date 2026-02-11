@@ -42,6 +42,8 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
+            this.LblAlinanUrunler1 = new System.Windows.Forms.Label();
+            this.LblAlinanUrunler2 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -134,7 +136,7 @@
             // 
             // BtnHesapla
             // 
-            this.BtnHesapla.Location = new System.Drawing.Point(373, 113);
+            this.BtnHesapla.Location = new System.Drawing.Point(373, 175);
             this.BtnHesapla.Name = "BtnHesapla";
             this.BtnHesapla.Size = new System.Drawing.Size(359, 29);
             this.BtnHesapla.TabIndex = 10;
@@ -170,11 +172,31 @@
             this.label7.Text = "*********************************************************************************" +
     "*****************************************************************************";
             // 
+            // LblAlinanUrunler1
+            // 
+            this.LblAlinanUrunler1.AutoSize = true;
+            this.LblAlinanUrunler1.Location = new System.Drawing.Point(261, 90);
+            this.LblAlinanUrunler1.Name = "LblAlinanUrunler1";
+            this.LblAlinanUrunler1.Size = new System.Drawing.Size(21, 16);
+            this.LblAlinanUrunler1.TabIndex = 14;
+            this.LblAlinanUrunler1.Text = "00";
+            // 
+            // LblAlinanUrunler2
+            // 
+            this.LblAlinanUrunler2.AutoSize = true;
+            this.LblAlinanUrunler2.Location = new System.Drawing.Point(346, 90);
+            this.LblAlinanUrunler2.Name = "LblAlinanUrunler2";
+            this.LblAlinanUrunler2.Size = new System.Drawing.Size(21, 16);
+            this.LblAlinanUrunler2.TabIndex = 15;
+            this.LblAlinanUrunler2.Text = "00";
+            // 
             // GelirGider
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 230);
+            this.Controls.Add(this.LblAlinanUrunler2);
+            this.Controls.Add(this.LblAlinanUrunler1);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label6);
@@ -191,6 +213,7 @@
             this.Controls.Add(this.label1);
             this.Name = "GelirGider";
             this.Text = "GelirGider";
+            this.Load += new System.EventHandler(this.GelirGider_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -212,5 +235,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label LblAlinanUrunler1;
+        private System.Windows.Forms.Label LblAlinanUrunler2;
     }
 }

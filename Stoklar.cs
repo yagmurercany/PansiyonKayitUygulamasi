@@ -21,6 +21,7 @@ namespace PansiyonKayitUygulamasi
 
         private void veriler()
         {
+            listView1.Items.Clear();
             con.Open();
             SqlCommand cmd = new SqlCommand("select * from  AlinanUrunler", con);
             SqlDataReader dr = cmd.ExecuteReader();
@@ -39,8 +40,13 @@ namespace PansiyonKayitUygulamasi
         }
         private void BtnKaydet_Click(object sender, EventArgs e)
         {
-                    
-            }
+            con.Open();
+            SqlCommand cmd = new SqlCommand("insert into AlinanUrunler (Gıda,İçecek,Çerezler) values ( '"+ TxtGida.Text + "' ,'" + Txtİcecek.Text + "','" + TxtAtistirmalik.Text+ "')", con);
+            cmd.ExecuteNonQuery();
+            con.Close();
+            veriler();
+
+        }
 
         private void Stoklar_Load(object sender, EventArgs e)
         {
