@@ -1,12 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace PansiyonKayitUygulamasi
@@ -31,7 +25,7 @@ namespace PansiyonKayitUygulamasi
         {
             TxtOdaNo.Text = "102";
             con.Open();
-            SqlCommand cmd = new SqlCommand("insert into Oda102 (Adi,Soyadi) values ('"+ TxtAd.Text +"','"+ TxtSoyadi.Text +"')",con);
+            SqlCommand cmd = new SqlCommand("insert into Oda102 (Adi,Soyadi) values ('" + TxtAd.Text + "','" + TxtSoyadi.Text + "')", con);
             cmd.ExecuteNonQuery();
             con.Close();
         }
@@ -111,7 +105,7 @@ namespace PansiyonKayitUygulamasi
         private void BtnKaydet_Click(object sender, EventArgs e)
         {
             con.Open();
-            SqlCommand cmd = new SqlCommand("insert into musterikayit (ad,soyad,cinsiyet,telefon,mail,tc,oda,ücret,giristarihi,cikistarihi) values ('" + TxtAd.Text + "','" + TxtSoyadi.Text + "','" + CbCinsiyet.Text + "','" +MtbxTelefon.Text + "','" + TxtMail.Text + "','" + TxtTc.Text + "','" + TxtOdaNo.Text + "','" + TxtUcret.Text + "','" + DtpGirisTarihi.Value.ToString("yyyy-MM-dd") + "','" + DtpCikisTarihi.Value.ToString("yyyy-MM-dd")+"')",con);
+            SqlCommand cmd = new SqlCommand("insert into musterikayit (ad,soyad,cinsiyet,telefon,mail,tc,oda,ücret,giristarihi,cikistarihi) values ('" + TxtAd.Text + "','" + TxtSoyadi.Text + "','" + CbCinsiyet.Text + "','" + MtbxTelefon.Text + "','" + TxtMail.Text + "','" + TxtTc.Text + "','" + TxtOdaNo.Text + "','" + TxtUcret.Text + "','" + DtpGirisTarihi.Value.ToString("yyyy-MM-dd") + "','" + DtpCikisTarihi.Value.ToString("yyyy-MM-dd") + "')", con);
             cmd.ExecuteNonQuery();
             con.Close();
             MessageBox.Show("Müşteri Kaydı Yapıldı.");

@@ -1,14 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Data.SqlClient;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace PansiyonKayitUygulamasi
 {
@@ -25,7 +17,7 @@ namespace PansiyonKayitUygulamasi
         {
             listView1.Items.Clear();
             con.Open();
-            SqlCommand cmd = new SqlCommand("select * from musterikayit",con);
+            SqlCommand cmd = new SqlCommand("select * from musterikayit", con);
             SqlDataReader oku = cmd.ExecuteReader();
 
             while (oku.Read())
@@ -61,7 +53,7 @@ namespace PansiyonKayitUygulamasi
             TxtAd.Text = listView1.SelectedItems[0].SubItems[1].Text; //subitems alt alan adı oluyor . öğe olarak düşünülebilir.
             TxtSoyadi.Text = listView1.SelectedItems[0].SubItems[2].Text;
             CbCinsiyet.Text = listView1.SelectedItems[0].SubItems[3].Text;
-            
+
             MtbxTelefon.Text = listView1.SelectedItems[0].SubItems[4].Text;
             TxtMail.Text = listView1.SelectedItems[0].SubItems[5].Text;
             TxtTc.Text = listView1.SelectedItems[0].SubItems[6].Text;
@@ -73,7 +65,7 @@ namespace PansiyonKayitUygulamasi
 
         private void BtnSil_Click(object sender, EventArgs e)
         {
-           
+
             if (TxtOdaNo.Text == "101")
             {
                 SqlCommand cmd = new SqlCommand("delete from Oda101 where Adi='" + TxtAd.Text + "'", con);
@@ -151,14 +143,14 @@ namespace PansiyonKayitUygulamasi
         {
             SecimEkrani kontrol = new SecimEkrani();
             kontrol.Show();
-            
+
         }
 
         private void BtnTemizle_Click(object sender, EventArgs e)
         {
             TxtAd.Clear();
-            TxtSoyadi.Clear();  
-            CbCinsiyet.Text = "";   
+            TxtSoyadi.Clear();
+            CbCinsiyet.Text = "";
             MtbxTelefon.Clear();
             TxtMail.Clear();
             TxtTc.Clear();
@@ -182,7 +174,7 @@ namespace PansiyonKayitUygulamasi
         {
             listView1.Items.Clear();
             con.Open();
-            SqlCommand cmd = new SqlCommand("select * from musterikayit where Tc like '%"+TxtTc.Text+"%'", con);
+            SqlCommand cmd = new SqlCommand("select * from musterikayit where Tc like '%" + TxtTc.Text + "%'", con);
             SqlDataReader oku = cmd.ExecuteReader();
 
             while (oku.Read())

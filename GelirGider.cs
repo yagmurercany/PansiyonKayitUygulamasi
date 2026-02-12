@@ -1,15 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Data.SqlClient;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Data.Sql;
-using System.CodeDom.Compiler;
 
 namespace PansiyonKayitUygulamasi
 {
@@ -28,7 +19,7 @@ namespace PansiyonKayitUygulamasi
             LblPersonelMaas.Text = (personel * 1500).ToString();
 
             int sonuc, kasa, gider;
-            
+
             kasa = Convert.ToInt32(LblKasaToplam.Text);
             gider = Convert.ToInt16(LblPersonelMaas.Text) + Convert.ToInt16(LblAlinanUrun.Text) + Convert.ToInt16(LblAlinanUrunler1.Text) + Convert.ToInt16(LblAlinanUrunler2.Text) + Convert.ToInt16(LblFatura.Text) + Convert.ToInt16(lblFatura1.Text) + Convert.ToInt16(lblFatura2.Text);
             sonuc = kasa - gider;
@@ -50,7 +41,7 @@ namespace PansiyonKayitUygulamasi
 
             //gıda stokların giderleri
             con.Open();
-          
+
             SqlCommand cmd2 = new SqlCommand("select sum(Gıda) as toplam1 from AlinanUrunler", con);
             SqlDataReader oku2 = cmd2.ExecuteReader();
             while (oku2.Read())
@@ -120,4 +111,4 @@ namespace PansiyonKayitUygulamasi
         }
 
     }
-    }
+}

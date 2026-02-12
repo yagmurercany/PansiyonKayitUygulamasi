@@ -1,12 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Security.Cryptography;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace PansiyonKayitUygulamasi
@@ -27,8 +19,8 @@ namespace PansiyonKayitUygulamasi
 
         private void button4_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Yine bekleriz!","Çıkış Yapıldı",MessageBoxButtons.OK,MessageBoxIcon.Information);
-            this.Hide();   
+            MessageBox.Show("Yine bekleriz!", "Çıkış Yapıldı", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            this.Hide();
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -70,7 +62,7 @@ namespace PansiyonKayitUygulamasi
 
         private void BtnMstok_Click(object sender, EventArgs e)
         {
-            Stoklar stoklar = new Stoklar();   
+            Stoklar stoklar = new Stoklar();
             stoklar.Show();
             this.Hide();
         }
