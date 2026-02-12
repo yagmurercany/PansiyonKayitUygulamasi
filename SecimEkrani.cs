@@ -81,5 +81,11 @@ namespace PansiyonKayitUygulamasi
             radyo.Show();
 
         }
+
+        private void button10_Click(object sender, EventArgs e)
+        {
+            Gazeteler gzt = new Gazeteler();
+            gzt.Show();
+        }
     }
 }

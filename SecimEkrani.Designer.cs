@@ -44,6 +44,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.BtnSifreGuncelleme = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // button1
@@ -140,8 +141,9 @@
             this.button10.Name = "button10";
             this.button10.Size = new System.Drawing.Size(143, 137);
             this.button10.TabIndex = 9;
-            this.button10.Text = "Personel Maaşlar";
+            this.button10.Text = "Gazeteler";
             this.button10.UseVisualStyleBackColor = true;
+            this.button10.Click += new System.EventHandler(this.button10_Click);
             // 
             // btnCikis
             // 
@@ -184,12 +186,22 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Tarih - Saat";
             // 
+            // BtnSifreGuncelleme
+            // 
+            this.BtnSifreGuncelleme.Location = new System.Drawing.Point(758, 191);
+            this.BtnSifreGuncelleme.Name = "BtnSifreGuncelleme";
+            this.BtnSifreGuncelleme.Size = new System.Drawing.Size(312, 46);
+            this.BtnSifreGuncelleme.TabIndex = 14;
+            this.BtnSifreGuncelleme.Text = "Şifre Güncelleme İşlemleri";
+            this.BtnSifreGuncelleme.UseVisualStyleBackColor = true;
+            // 
             // SecimEkrani
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(1082, 307);
+            this.Controls.Add(this.BtnSifreGuncelleme);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnCikis);
@@ -231,5 +243,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Button BtnSifreGuncelleme;
     }
 }
